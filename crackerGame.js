@@ -49,24 +49,24 @@ class Game {
 
     this.sprites = [];
 
-    this.background = new Sprite(this, "images/picnic.jpeg");
+    this.background = new Sprite(this, "picnic.jpeg");
     this.sprites[this.sprites.length] = this.background;
     for (let i = 0; i < 30; i = i + 1) {
       this.sprites[this.sprites.length] = new Cracker(
         this,
-        "images/cracker.png",
+        "cracker.png",
         "sounds/burp.wav"
       );
     }
 
-    this.cheese = new Cheese(this, "images/cheese.png");
+    this.cheese = new Cheese(this, "cheese.png");
     this.sprites[this.sprites.length] = this.cheese;
 
     for (let tomatoCount = 0; tomatoCount < 5; tomatoCount = tomatoCount + 1) {
       let entryDelay = 300 + tomatoCount * 600;
       this.sprites[this.sprites.length] = new Tomato(
         this,
-        "images/tomato.png",
+        "tomato.png",
         entryDelay
       );
     }
